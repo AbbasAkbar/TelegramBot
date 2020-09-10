@@ -1,6 +1,10 @@
-﻿using System;
+﻿using MediaToolkit;
+using MediaToolkit.Model;
+using System;
+using System.IO;
 using Telegram.Bot;
 using Telegram.Bot.Args;
+using VideoLibrary;
 
 namespace TelegramBotApp
 {
@@ -9,7 +13,7 @@ namespace TelegramBotApp
         /// <summary>  
         /// Declare Telegrambot object  
         /// </summary>  
-        private static readonly TelegramBotClient bot = new TelegramBotClient("1213789136:AAEwP0LpqiPL8IawjWCzzIZOE_Pnzq-n_tQ");
+        private static readonly TelegramBotClient bot = new TelegramBotClient("{token}");
 
         /// <summary>  
         /// csharp corner chat bot web hook  
@@ -36,6 +40,8 @@ namespace TelegramBotApp
         }
         public static void PrepareQuestionnaires(MessageEventArgs e)
         {
+            SaveMp3(e.Message.Text);
+
             if (e.Message.Text.Contains("billie"))
             {
                 bot.SendTextMessageAsync(e.Message.Chat.Id, "https://www.youtube.com/watch?v=V1Pl8CzNzCw");
@@ -57,6 +63,24 @@ namespace TelegramBotApp
             //    bot.SendTextMessageAsync(e.Message.Chat.Id, Environment.NewLine + "https://www.c-sharpcorner.com/article/getting-started-with-ionic-framework-angular-and-net-core-3/" + Environment.NewLine + Environment.NewLine +
             //        "https://www.c-sharpcorner.com/article/getting-started-with-ember-js-and-net-core-3/" + Environment.NewLine + Environment.NewLine +
             //        "https://www.c-sharpcorner.com/article/getting-started-with-vue-js-and-net-core-32/");
+        }
+
+        public static void SaveMp3(string url)
+        {
+            var source = @"source";
+            var youtube = YouTube.Default;
+            var vid = youtube.GetVideo(url);
+            File.WriteAllBytes(source + vid.FullName, vid.GetBytes());
+
+            var inputFile = new MediaFile { Filename = source + vid.FullName };
+            var outputFile = new MediaFile { Filename = $"{source + vid.FullName}.mp3" };
+
+            using (var engine = new Engine())
+            {
+                engine.GetMetadata(inputFile);
+
+                engine.Convert(inputFile, outputFile);
+            }
         }
     }
 }

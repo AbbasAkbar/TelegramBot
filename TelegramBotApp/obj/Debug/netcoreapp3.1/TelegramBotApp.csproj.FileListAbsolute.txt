@@ -14,3 +14,21 @@ C:\Users\Asus Tuf Gaming\source\repos\TelegramBotApp\TelegramBotApp\obj\Debug\ne
 C:\Users\Asus Tuf Gaming\source\repos\TelegramBotApp\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.dll
 C:\Users\Asus Tuf Gaming\source\repos\TelegramBotApp\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.pdb
 C:\Users\Asus Tuf Gaming\source\repos\TelegramBotApp\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.genruntimeconfig.cache
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.exe
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.deps.json
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.runtimeconfig.json
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.runtimeconfig.dev.json
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\TelegramBotApp.pdb
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.csprojAssemblyReference.cache
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.AssemblyInfoInputs.cache
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.AssemblyInfo.cs
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.csproj.CopyComplete
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.pdb
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.genruntimeconfig.cache
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\MediaToolkit.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\bin\Debug\netcoreapp3.1\libvideo.dll
+C:\Users\Dev\Source\Repos\TelegramBot\TelegramBotApp\obj\Debug\netcoreapp3.1\TelegramBotApp.csproj.CoreCompileInputs.cache

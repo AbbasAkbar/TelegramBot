@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "MediaToolkit/1.1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/MediaToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MediaToolkit.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -80,7 +89,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1258,10 +1267,37 @@
         "runtime": {
           "lib/netstandard1.1/Telegram.Bot.dll": {}
         }
+      },
+      "VideoLibrary/3.0.6": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.1/libvideo.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/libvideo.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "MediaToolkit/1.1.0.1": {
+      "sha512": "R3u+udQOUDBGUzx4wOHsp6yiSLMdJle7a9E7JK4/btL4w/pdXAmNHP2JMe2Fpt35kLjKNE74oNKUM1hc6RceIA==",
+      "type": "package",
+      "path": "mediatoolkit/1.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/readme.txt",
+        "lib/net20/MediaToolkit.dll",
+        "lib/net40/MediaToolkit.dll",
+        "mediatoolkit.1.1.0.1.nupkg.sha512",
+        "mediatoolkit.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -1343,10 +1379,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1369,8 +1405,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4697,27 +4734,41 @@
         "telegram.bot.15.7.1.nupkg.sha512",
         "telegram.bot.nuspec"
       ]
+    },
+    "VideoLibrary/3.0.6": {
+      "sha512": "Zi88jaBMLL6BHEHnbAzKHtOQN9Y47j68ztrEOgZk5MnEBGzWUGWxSFxqq+QbjulOBPfKUs6GARgF5OUqFKO/4g==",
+      "type": "package",
+      "path": "videolibrary/3.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/libvideo.dll",
+        "videolibrary.3.0.6.nupkg.sha512",
+        "videolibrary.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Telegram.Bot >= 15.7.1"
+      "MediaToolkit >= 1.1.0.1",
+      "Telegram.Bot >= 15.7.1",
+      "VideoLibrary >= 3.0.6"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages\\": {}
+    "C:\\Users\\Dev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
+      "projectUniqueName": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
       "projectName": "TelegramBotApp",
-      "projectPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
-      "packagesPath": "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\obj\\",
+      "projectPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
+      "packagesPath": "C:\\Users\\Dev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asus Tuf Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4741,9 +4792,17 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "MediaToolkit": {
+            "target": "Package",
+            "version": "[1.1.0.1, )"
+          },
           "Telegram.Bot": {
             "target": "Package",
             "version": "[15.7.1, )"
+          },
+          "VideoLibrary": {
+            "target": "Package",
+            "version": "[3.0.6, )"
           }
         },
         "imports": [
@@ -4761,8 +4820,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MediaToolkit 1.1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MediaToolkit",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Asus Tuf Gaming\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages"
+      "C:\\Users\\Dev\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Dev\\.nuget\\packages"
     ]
   }
 }

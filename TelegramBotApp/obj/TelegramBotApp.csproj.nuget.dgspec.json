@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj": {}
+    "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj": {
+    "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
+        "projectUniqueName": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
         "projectName": "TelegramBotApp",
-        "projectPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
-        "packagesPath": "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\obj\\",
+        "projectPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
+        "packagesPath": "C:\\Users\\Dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus Tuf Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,9 +38,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MediaToolkit": {
+              "target": "Package",
+              "version": "[1.1.0.1, )"
+            },
             "Telegram.Bot": {
               "target": "Package",
               "version": "[15.7.1, )"
+            },
+            "VideoLibrary": {
+              "target": "Package",
+              "version": "[3.0.6, )"
             }
           },
           "imports": [
@@ -58,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
