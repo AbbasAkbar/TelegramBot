@@ -4756,19 +4756,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dev\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
+      "projectUniqueName": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
       "projectName": "TelegramBotApp",
-      "projectPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\TelegramBotApp.csproj",
-      "packagesPath": "C:\\Users\\Dev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dev\\Source\\Repos\\TelegramBot\\TelegramBotApp\\obj\\",
+      "projectPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\TelegramBotApp.csproj",
+      "packagesPath": "C:\\Users\\Asus Tuf Gaming\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus Tuf Gaming\\source\\repos\\TelegramBotApp\\TelegramBotApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus Tuf Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4820,7 +4820,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -2,8 +2,10 @@
 using MediaToolkit.Model;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using Telegram.Bot;
 using Telegram.Bot.Args;
+using Telegram.Bot.Types.InputFiles;
 using VideoLibrary;
 
 namespace TelegramBotApp
@@ -21,18 +23,13 @@ namespace TelegramBotApp
         /// <param name="args"></param>  
         static void Main(string[] args)
         {
+            Console.WriteLine();
             bot.OnMessage += Csharpcornerbotmessage;
             bot.StartReceiving();
             Console.ReadLine();
             bot.StopReceiving();
-
         }
 
-        /// <summary>  
-        /// Handle bot webhook  
-        /// </summary>  
-        /// <param name="sender"></param>  
-        /// <param name="e"></param>  
         private static void Csharpcornerbotmessage(object sender, MessageEventArgs e)
         {
             if (e.Message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
@@ -40,47 +37,36 @@ namespace TelegramBotApp
         }
         public static void PrepareQuestionnaires(MessageEventArgs e)
         {
-            SaveMp3(e.Message.Text);
-
-            if (e.Message.Text.Contains("billie"))
+            Console.WriteLine("user :" + e.Message.Text);
+            try
             {
-                bot.SendTextMessageAsync(e.Message.Chat.Id, "https://www.youtube.com/watch?v=V1Pl8CzNzCw");
-                bot.SendTextMessageAsync(e.Message.Chat.Id, "https://www.youtube.com/watch?v=DyDfgMOUjCI");
-                bot.SendTextMessageAsync(e.Message.Chat.Id, "https://www.youtube.com/watch?v=pbMwTqkKSps");
+                string networkpath = SaveMp3(e.Message.Text);
+                InputOnlineFile videoFile = new InputOnlineFile(new MemoryStream(File.ReadAllBytes(networkpath)));
+                bot.SendVideoAsync(e.Message.Chat.Id, videoFile);
+                if (File.Exists(networkpath))
+                {
+                    File.Delete(networkpath);
+                }
             }
-            //if (e.Message.Text.ToLower() == "hi")
-            //    bot.SendTextMessageAsync(e.Message.Chat.Id, "hello dude" + Environment.NewLine + "welcome to csharp corner chat bot." + Environment.NewLine + "How may i help you ?");
-            //if (e.Message.Text.ToLower().Contains("know about"))
-            //    bot.SendTextMessageAsync(e.Message.Chat.Id, "Yes sure..!!" + Environment.NewLine + "Mahesh Chand is the founder of C# Corner.Please go through for more detail." + Environment.NewLine + "https://www.c-sharpcorner.com/about");
-            //if (e.Message.Text.ToLower().Contains("csharpcorner logo?"))
-            //{
-            //    bot.SendStickerAsync(e.Message.Chat.Id, "https://csharpcorner-mindcrackerinc.netdna-ssl.com/App_Themes/CSharp/Images/SiteLogo.png");
-            //    bot.SendTextMessageAsync(e.Message.Chat.Id, "Anything else?");
-            //}
-            //if (e.Message.Text.ToLower().Contains("list of featured"))
-            //    bot.SendTextMessageAsync(e.Message.Chat.Id, "Give me your profile link ?");
-            //if (e.Message.Text.ToLower().Contains("here it is"))
-            //    bot.SendTextMessageAsync(e.Message.Chat.Id, Environment.NewLine + "https://www.c-sharpcorner.com/article/getting-started-with-ionic-framework-angular-and-net-core-3/" + Environment.NewLine + Environment.NewLine +
-            //        "https://www.c-sharpcorner.com/article/getting-started-with-ember-js-and-net-core-3/" + Environment.NewLine + Environment.NewLine +
-            //        "https://www.c-sharpcorner.com/article/getting-started-with-vue-js-and-net-core-32/");
+            catch (Exception)
+            {
+                bot.SendTextMessageAsync(e.Message.Chat.Id, "This is not a youtube link");
+            }
         }
-
-        public static void SaveMp3(string url)
+        public static string SaveMp3(string url)
         {
-            var source = @"source";
+            var source = @"{path}";
             var youtube = YouTube.Default;
             var vid = youtube.GetVideo(url);
             File.WriteAllBytes(source + vid.FullName, vid.GetBytes());
-
-            var inputFile = new MediaFile { Filename = source + vid.FullName };
-            var outputFile = new MediaFile { Filename = $"{source + vid.FullName}.mp3" };
-
-            using (var engine = new Engine())
-            {
-                engine.GetMetadata(inputFile);
-
-                engine.Convert(inputFile, outputFile);
-            }
+            var input = new MediaFile { Filename = source + vid.FullName };
+            var output = new MediaFile { Filename = $"{source + vid.FullName}.mp3" };
+            //using (var engine = new Engine())
+            //{
+            //    engine.GetMetadata(input);
+            //    engine.Convert(input, output);
+            //}
+            return source + vid.FullName;
         }
     }
 }
